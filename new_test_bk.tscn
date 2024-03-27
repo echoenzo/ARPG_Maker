@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://dmka0nrypfsb5"]
+
+[ext_resource type="Texture2D" uid="uid://dt4g78tsiobl1" path="res://微信图片_20240322165959.png" id="1_y7ofh"]
+[ext_resource type="PackedScene" uid="uid://darmm41gdxbj2" path="res://new_test.tscn" id="2_awipe"]
+
+[node name="NewTestBK" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(289, 172)
+texture = ExtResource("1_y7ofh")
+
+[node name="NewTest" parent="." instance=ExtResource("2_awipe")]
+position = Vector2(264, 125)
+
+[node name="Sprite2D" parent="NewTest" index="0"]
+scale = Vector2(0.5, 0.5)
+
+[editable path="NewTest"]

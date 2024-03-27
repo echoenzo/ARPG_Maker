@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://drb1r14a34gx2"]
+
+[ext_resource type="AudioStream" uid="uid://cpmt117qn4nt0" path="res://Action RPG Resources/Music and Sounds/Music.mp3" id="1_7keg4"]
+
+[node name="BKMusic" type="AudioStreamPlayer"]
+stream = ExtResource("1_7keg4")
+autoplay = true

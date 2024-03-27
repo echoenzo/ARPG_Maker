@@ -1,0 +1,137 @@
+[gd_scene load_steps=23 format=3 uid="uid://cfmmrjsymooyj"]
+
+[ext_resource type="Texture2D" uid="uid://b3jd4psr0xr5d" path="res://Action RPG Resources/Enemies/Bat.png" id="1_fhh8j"]
+[ext_resource type="Script" path="res://Scenes/Enemys/Bat.cs" id="1_xwsdi"]
+[ext_resource type="Texture2D" uid="uid://ckjfecolgyakk" path="res://Action RPG Resources/Shadows/SmallShadow.png" id="2_5pkgu"]
+[ext_resource type="PackedScene" uid="uid://kf2johj17f2s" path="res://Scenes/Detection/hurtbox.tscn" id="3_pctx0"]
+[ext_resource type="PackedScene" uid="uid://dhmsb72u7kapr" path="res://Scenes/stats.tscn" id="5_3d6ld"]
+[ext_resource type="Script" path="res://Scenes/Detection/BatHurtbox.cs" id="5_r64vu"]
+[ext_resource type="PackedScene" uid="uid://bo72y5jxdl87" path="res://Scenes/Detection/player_detection_area.tscn" id="6_c8tgc"]
+[ext_resource type="PackedScene" uid="uid://vehx0lk0gc4c" path="res://Scenes/Detection/hitbox.tscn" id="8_y1wf2"]
+[ext_resource type="Script" path="res://Scenes/Detection/Hitbox.cs" id="9_d4b8d"]
+[ext_resource type="PackedScene" uid="uid://bmtbjbd21qkwd" path="res://Scenes/Detection/SoftCollision.tscn" id="10_js12t"]
+[ext_resource type="PackedScene" uid="uid://dhsdgrk8xpcmb" path="res://Scenes/Detection/WanderController.tscn" id="11_6bsyb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uhaxw"]
+atlas = ExtResource("1_fhh8j")
+region = Rect2(0, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tqvx7"]
+atlas = ExtResource("1_fhh8j")
+region = Rect2(16, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vkmap"]
+atlas = ExtResource("1_fhh8j")
+region = Rect2(32, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dk8ds"]
+atlas = ExtResource("1_fhh8j")
+region = Rect2(48, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d4v6u"]
+atlas = ExtResource("1_fhh8j")
+region = Rect2(64, 0, 16, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_apmeg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uhaxw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tqvx7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vkmap")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dk8ds")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d4v6u")
+}],
+"loop": true,
+"name": &"Fly",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ug3jg"]
+radius = 5.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3xxw3"]
+radius = 6.0
+height = 14.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_l1qkx"]
+radius = 108.042
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1b22m"]
+radius = 6.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_33rtn"]
+radius = 7.0
+
+[node name="Bat" type="CharacterBody2D"]
+collision_layer = 16
+script = ExtResource("1_xwsdi")
+Friction = 500
+Max_Speed = 20
+Acceleration = 100
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -10)
+sprite_frames = SubResource("SpriteFrames_apmeg")
+animation = &"Fly"
+autoplay = "Fly"
+frame_progress = 0.844348
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_ug3jg")
+
+[node name="ShadowSprite" type="Sprite2D" parent="."]
+position = Vector2(0, 3)
+texture = ExtResource("2_5pkgu")
+
+[node name="Hurtbox" parent="." instance=ExtResource("3_pctx0")]
+position = Vector2(0, -10)
+collision_layer = 0
+collision_mask = 64
+script = ExtResource("5_r64vu")
+
+[node name="CollisionShape2D" parent="Hurtbox" index="0"]
+position = Vector2(0, -4)
+shape = SubResource("CapsuleShape2D_3xxw3")
+
+[node name="Stats" parent="." instance=ExtResource("5_3d6ld")]
+MaxHealth = 5
+Damage = 2
+
+[node name="PlayerDetectionArea" parent="." instance=ExtResource("6_c8tgc")]
+
+[node name="CollisionShape2D" parent="PlayerDetectionArea" index="0"]
+shape = SubResource("CircleShape2D_l1qkx")
+
+[node name="Hitbox" parent="." instance=ExtResource("8_y1wf2")]
+collision_layer = 32
+collision_mask = 0
+script = ExtResource("9_d4b8d")
+
+[node name="CollisionShape2D" parent="Hitbox" index="0"]
+position = Vector2(0, -13)
+shape = SubResource("CircleShape2D_1b22m")
+
+[node name="SoftCollision" parent="." instance=ExtResource("10_js12t")]
+collision_layer = 128
+collision_mask = 128
+
+[node name="CollisionShape2D" parent="SoftCollision" index="0"]
+shape = SubResource("CircleShape2D_33rtn")
+
+[node name="WanderController" parent="." instance=ExtResource("11_6bsyb")]
+randomRange = 48
+
+[editable path="Hurtbox"]
+[editable path="Stats"]
+[editable path="PlayerDetectionArea"]
+[editable path="Hitbox"]
+[editable path="SoftCollision"]

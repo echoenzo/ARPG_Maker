@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="PropertyResource" load_steps=2 format=3 uid="uid://dde4bliey0bxr"]
+
+[ext_resource type="Script" path="res://Common/PropertyResource.cs" id="1_48mvu"]
+
+[resource]
+script = ExtResource("1_48mvu")
+Health = 10
+MaxHealth = 10
+Damage = 5

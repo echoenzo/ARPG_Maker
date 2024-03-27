@@ -1,0 +1,133 @@
+[gd_scene load_steps=29 format=3 uid="uid://capi64i6of0lq"]
+
+[ext_resource type="Texture2D" uid="uid://ctysht2w6oxnu" path="res://Flashing/Left1.png" id="1_7ucfa"]
+[ext_resource type="Texture2D" uid="uid://8lk2elecukgd" path="res://Flashing/Left2.png" id="2_mq8bu"]
+[ext_resource type="Texture2D" uid="uid://dag8lqkjivyee" path="res://Flashing/Left3.png" id="3_rqdg8"]
+[ext_resource type="Texture2D" uid="uid://s55eko6sejaf" path="res://Flashing/Left4.png" id="4_bkth1"]
+[ext_resource type="Texture2D" uid="uid://bmtrduy5fo4o8" path="res://Flashing/Left5.png" id="5_tbc8y"]
+[ext_resource type="Texture2D" uid="uid://rmqunhpd2nan" path="res://Flashing/Left6.png" id="6_ulehq"]
+[ext_resource type="Texture2D" uid="uid://cxdruhypqcdva" path="res://Flashing/Left7.png" id="7_j430k"]
+[ext_resource type="Texture2D" uid="uid://d2yrr1va2og6r" path="res://Flashing/Left8.png" id="8_jp0h6"]
+[ext_resource type="Texture2D" uid="uid://cb0de50dyd5h6" path="res://Flashing/Left9.png" id="9_aqxqu"]
+[ext_resource type="Texture2D" uid="uid://cstcar6c7y40f" path="res://Flashing/Right1.png" id="10_mu0l5"]
+[ext_resource type="Texture2D" uid="uid://xjkj1fr75olo" path="res://Flashing/Right2.png" id="11_u2gun"]
+[ext_resource type="Texture2D" uid="uid://vq40j86dddyv" path="res://Flashing/Right3.png" id="12_5tid5"]
+[ext_resource type="Texture2D" uid="uid://cv2bpwxq68bk1" path="res://Flashing/Right4.png" id="13_7heg1"]
+[ext_resource type="Texture2D" uid="uid://dq2ls8rgbbr68" path="res://Flashing/Right5.png" id="14_t6v2r"]
+[ext_resource type="Texture2D" uid="uid://bab47jksj12r8" path="res://Flashing/Right6.png" id="15_ofmev"]
+[ext_resource type="Texture2D" uid="uid://ivgrd2nunt8l" path="res://Flashing/Right7.png" id="16_q34ls"]
+[ext_resource type="Texture2D" uid="uid://dfxmxke2c7dkd" path="res://女海盗/女海盗跑动动画1.png" id="17_k1l6r"]
+[ext_resource type="Texture2D" uid="uid://bxj5v6klmag5x" path="res://女海盗/女海盗跑动动画2.png" id="18_811le"]
+[ext_resource type="Texture2D" uid="uid://djnu1cilj1877" path="res://女海盗/女海盗跑动动画3.png" id="19_a78fa"]
+[ext_resource type="Texture2D" uid="uid://bmbdfv200ct06" path="res://女海盗/女海盗跑动动画4.png" id="20_fvcak"]
+[ext_resource type="Texture2D" uid="uid://6uehofbtjty8" path="res://女海盗/女海盗跑动动画5.png" id="21_64e6y"]
+[ext_resource type="Texture2D" uid="uid://bcduluu8w1muv" path="res://女海盗/女海盗跑动动画6.png" id="22_gjjwb"]
+[ext_resource type="Texture2D" uid="uid://g0ee13e1y1v5" path="res://女海盗/女海盗跑动动画7.png" id="23_voiu7"]
+[ext_resource type="Texture2D" uid="uid://dt8gsv3ryhe3d" path="res://女海盗/女海盗跑动动画8.png" id="24_iko55"]
+[ext_resource type="Texture2D" uid="uid://cq6kd5jk7sgqk" path="res://女海盗/女海盗跑动动画9.png" id="25_xd1le"]
+[ext_resource type="Texture2D" uid="uid://ddn4yjsit2s7x" path="res://女海盗/女海盗跑动动画10.png" id="26_ca01m"]
+[ext_resource type="Texture2D" uid="uid://dyif72qodfer2" path="res://女海盗/女海盗跑动动画11.png" id="27_jhkca"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lelji"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_7ucfa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_mq8bu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_rqdg8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_bkth1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_tbc8y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ulehq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_j430k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_jp0h6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_aqxqu")
+}],
+"loop": false,
+"name": &"Shansuo_Left",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_mu0l5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_u2gun")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_5tid5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_7heg1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_t6v2r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_ofmev")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_q34ls")
+}],
+"loop": false,
+"name": &"Shansuo_Right",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_k1l6r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_811le")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_a78fa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_fvcak")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_64e6y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_gjjwb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_voiu7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_iko55")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_xd1le")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_ca01m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_jhkca")
+}],
+"loop": true,
+"name": &"nvhaidao",
+"speed": 5.0
+}]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_lelji")
+animation = &"nvhaidao"
+frame_progress = 0.874962

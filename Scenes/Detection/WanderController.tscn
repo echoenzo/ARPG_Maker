@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dhsdgrk8xpcmb"]
+
+[ext_resource type="Script" path="res://Scenes/Detection/WanderController.cs" id="1_oc24b"]
+
+[node name="WanderController" type="Node2D"]
+script = ExtResource("1_oc24b")
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+autostart = true
